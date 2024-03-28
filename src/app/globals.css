@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply flex justify-center items-center p-0 m-0 ;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
