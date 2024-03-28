@@ -1,0 +1,219 @@
+
+
+#heading{
+    align-items: normal;
+    margin-top: 30px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    font-size: 20px;
+    
+}
+
+
+.tp{
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin-bottom: 2px;
+    
+}
+
+
+
+.hospital1{
+    position: absolute;
+    height: 300px;
+    width: 440px;
+    background-color:rgb(143, 218, 230, 0.8) ;
+    margin-right: 20px;
+    margin-top: 10px;
+    left: 10px;
+    border-radius: 20px;
+    
+    
+}
+
+
+
+.hospital2{
+     /*position: absolute;*/ 
+    height: 300px;
+    width: 440px;
+    margin-right: 90px;
+    background-color:rgba(143, 218, 230, 0.8) ;
+    margin-left: 0px;
+    margin-top: 10px;
+    align-items: center;
+    
+    border-radius: 20px;
+}
+
+
+.hospital3{
+    position: absolute;
+    height: 300px;
+    width: 440px;
+    right: 10px;
+    background-color:rgb(143, 218, 230, 0.8) ;
+    margin-right: 90px;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 20px;
+}
+.pic{
+    display: inline;
+}
+.pic img{
+    height: 150px;
+    width: 215px;
+    border-radius: 50px;
+    
+}
+.des{
+    
+    color: white;
+}
+.info{
+    height: 150px;
+    width: 215px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: rgb(13, 0, 0);
+    border-top-right-radius: 50px;
+    /* display: inline; */
+    /* border: 2px solid red; */
+}
+
+
+.tp2{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 10px;
+    padding-top: 2px;
+}
+
+
+.hospital4{
+    position: absolute;
+    height: 300px;
+    width: 440px;
+    background-color:rgba(143, 218, 230, 0.8) ;
+    margin-right: 20px;
+    margin-top: 10px;
+    left: 10px;
+    border-radius: 20px;
+    
+}
+
+
+
+.hospital5{
+     /*position: absolute;*/ 
+    height: 300px;
+    width: 440px;
+    margin-right: 90px;
+    background-color:rgba(143, 218, 230, 0.8) ;
+    margin-left: 0px;
+    margin-top: 10px;
+    align-items: center;
+    
+    border-radius: 20px;
+}
+
+
+.hospital6{
+    position: absolute;
+    height: 300px;
+    width: 440px;
+    right: 10px;
+    background-color:rgba(143, 218, 230, 0.8) ;
+    margin-right: 90px;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+
+.btn{
+    position: absolute;
+    right: 30px;
+}
+
+
+.tp3{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 10px;
+    padding-top: 2px;
+}
+
+
+.hospital7{
+    position: absolute;
+    height: 300px;
+    width: 440px;
+    background-color:rgba(143, 218, 230, 0.8) ;
+    margin-right: 20px;
+    margin-top: 10px;
+    left: 10px;
+    border-radius: 20px;
+    
+}
+
+
+
+.hospital8{
+     /*position: absolute;*/ 
+    height: 300px;
+    width: 440px;
+    margin-right: 90px;
+    background-color:rgba(143, 218, 230, 0.8) ;
+    margin-left: 0px;
+    margin-top: 10px;
+    align-items: center;
+    
+    border-radius: 20px;
+}
+
+
+.hospital9{
+    position: absolute;
+    height: 300px;
+    width: 440px;
+    right: 10px;
+    background-color:rgba(143, 218, 230, 0.8) ;
+    margin-right: 90px;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+
+.btn{
+    position: absolute;
+    right: 30px;
+}
+
+
+.tp4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px ;
+    padding: 300px;
+}
+
+.servhead{
+  padding-top: 2px;
+}

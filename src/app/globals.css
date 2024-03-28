@@ -19,3 +19,9 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
+
+.bg-main {
+  background: url("../assets/images/bg-main.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
