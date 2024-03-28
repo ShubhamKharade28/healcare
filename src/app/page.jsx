@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Navbar from "./components/navbar/Navbar";
 
-const RelastoHome = () => {
+const HealcareHome = () => {
 	return (
 		<main className="flex min-h-screen w-screen flex-col relative">
 			<Navbar />
@@ -12,4 +12,4 @@ const RelastoHome = () => {
 	);
 }
 
-export default RelastoHome;
+export default HealcareHome;
