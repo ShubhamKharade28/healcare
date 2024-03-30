@@ -1,8 +1,10 @@
+import Background from "../components/Background";
 
 const Login = () => {
     return (
         <main>
-            Login
+            <Background />
+            
         </main>
     )
 }
