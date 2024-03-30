@@ -5,7 +5,7 @@ import { useState } from "react";
 import healCareLogo from '@/assets/images/logo-bgless.png';
 
 const Navbar = () => {
-    const [isLogined, setIsLogined] = useState(true);
+    const [isLogined, setIsLogined] = useState(false);
     return (
         <nav className="mx-10 flex items-center justify-between my-5 gap-3 text-white">
             <section className="flex items-center justify-between w-full px-3 py-3 bg-[#1a759f] rounded-full"
@@ -32,7 +32,6 @@ const Navbar = () => {
                     <div className="bg-[#1a759f] h-16 w-16 rounded-full"></div>
                     </profile>
             }
-            
         </nav>
     )
 }
