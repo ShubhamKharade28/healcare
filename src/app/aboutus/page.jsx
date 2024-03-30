@@ -7,3 +7,5 @@ const Aboutus = () => {
         </main>
     )
 }
+
+export default Aboutus;
