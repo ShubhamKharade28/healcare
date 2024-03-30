@@ -1,15 +1,21 @@
 
 
 import Link from "next/link";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/Navbar";
+import Background from "./components/Background";
+import Footer from "./components/Footer";
 
-const RelastoHome = () => {
+const HealcareHome = () => {
 	return (
 		<main className="flex min-h-screen w-screen flex-col relative">
+			<Background />
 			<Navbar />
-			<Link href="/hospitals" className="text-xl font-bold">/hospital</Link>
+			<div className="h-screen">
+				
+			</div>
+			<Footer />
 		</main>
 	);
 }
 
-export default RelastoHome;
+export default HealcareHome;
