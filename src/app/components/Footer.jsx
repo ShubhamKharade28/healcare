@@ -26,20 +26,20 @@ const Footer = () => {
             <div className="flex flex-col gap-10 items-start">
                 <h2 className="text-2xl font-bold">Solutions</h2>
                 <div className="flex flex-col gap-3">
-                    <Link href="#">Hospitals</Link>
-                    <Link href="#">Medicals</Link>
-                    <Link href="#">Laboratories</Link>
-                    <Link href="#">Home Delivery</Link>
+                    <Link href="#" className="hover:opacity-80">Hospitals</Link>
+                    <Link href="#" className="hover:opacity-80">Medicals</Link>
+                    <Link href="#" className="hover:opacity-80">Laboratories</Link>
+                    <Link href="#" className="hover:opacity-80">Home Delivery</Link>
                 </div>
             </div>
             <div className="flex flex-col gap-3">
-                <Link href="/contactus" className="w-40 border-b border-b-white text-center py-2">Contact us</Link>
-                <Link href="/joinus" className="w-40 border-b border-b-white text-center py-2">Join us</Link>
+                <Link href="/contactus" className="w-40 border-b border-b-white text-center py-2 hover:opacity-80">Contact us</Link>
+                <Link href="/joinus" className="w-40 border-b border-b-white text-center py-2 hover:opacity-80">Join us</Link>
             </div>
             <div className="flex gap-3 items-center text-4xl">
-                <FaSquareFacebook />
-                <FaSquareInstagram />
-                <FaSquareWhatsapp />
+                <FaSquareFacebook className="hover:opacity-80"/>
+                <FaSquareInstagram className="hover:opacity-80"/>
+                <FaSquareWhatsapp className="hover:opacity-80" />
             </div>
         </footer>
     )

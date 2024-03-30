@@ -10,7 +10,9 @@ const HealcareHome = () => {
 		<main className="flex min-h-screen w-screen flex-col relative">
 			<Background />
 			<Navbar />
-			<div className="h-screen"></div>
+			<div className="h-screen">
+				
+			</div>
 			<Footer />
 		</main>
 	);
