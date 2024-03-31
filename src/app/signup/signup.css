@@ -1,4 +1,107 @@
+main{
+    height: 100vh;
+    width: 100vw;
+    padding: 0%;
+    margin:0;
+    box-sizing: border-box;
+}
+/* Aligning the card at the center of the screen */
+cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
 
-main {
-    color: red;
+}
+/* Positioning the elements of the card */
+form{
+    width: max-content;
+    background-color:#5B7087 ;
+    padding: 5%;    
+}
+
+/* Formatting the personal Details section i.e. their elements*/
+h1{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+.PersonalDetail h2{
+    font-size: 1.5rem;
+    color:darkblue;
+    margin: 1rem 0;
+}
+/* Positioning the items or elements in the personal section div */
+.PersonalDetail{
+    display: flex;
+    flex-direction: column;
+} 
+/* ----------------------------------------------------------------- */
+
+
+/* Entire Input section in which there are all input fields of Personal details */
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.inputs div{
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------- */
+
+
+/* That section in which there are two input fields in the same line */
+.oneLine{
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.oneLine div{
+    width: 30%;
+}
+.oneLine input, select{
+    width: 15rem;
+}
+/* ------------------------------------------------ */
+
+
+/* Name Input section */
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.name input{
+    width: 45%;
+}
+/* ---------------------------------------------------- */
+
+.address label{
+    display: flex;
+    align-items: start;
+}
+
+/* =======================MEDICAL DETAILS===================*/
+.Med_details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.Med_details div{
+    display: flex;
+    flex-direction: column;
+    max-width: 15rem;
+}
+.signup{
+    display: flex;
+    justify-content: center;
+}
+button{
+    scale: 1.5;
+    margin-top: 3rem;
+    background-color: #05168E;
+    padding: 0.25rem 2rem;
+    color: white;
 }

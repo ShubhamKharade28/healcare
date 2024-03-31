@@ -1,0 +1,43 @@
+main{
+    width: 100vw;
+    height: 100vh;
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Formating the Appointment Booking form */
+form{
+    background-color: aqua;
+    height: 80%;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 2rem 5rem;
+}
+form h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+form input {
+    width: 15rem;
+}
+
+.oneline{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+label{
+    width: 6rem;
+}
+.full{
+    
+}
