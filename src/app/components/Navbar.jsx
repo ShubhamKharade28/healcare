@@ -63,7 +63,7 @@ const Navbar = () => {
                         <span className="text-2xl font-bold">HealCare</span>
                     </logo>
                     <menu className="flex flex-col items-center">
-                        <LinkTo label="Home" path="/path" />
+                        <LinkTo label="Home" path="/" />
                         <LinkTo label="Services" path="/services" />
                         <LinkTo label="About us" path="/aboutus" />
                         <LinkTo label="Contact us" path="/contactus" />
