@@ -25,3 +25,7 @@
   background-size: cover;
   background-repeat: none;
 }
+
+body {
+  overflow:hidden;
+}
