@@ -1,219 +1,300 @@
-
-
-#heading{
+#heading {
     align-items: normal;
     margin-top: 30px;
     margin-bottom: 2px;
     margin-left: 2px;
     font-size: 20px;
-    
+
 }
 
 
-.tp{
+.tp {
     margin-top: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
     margin-bottom: 2px;
-    
+
 }
 
 
 
-.hospital1{
+.hospital1 {
     position: absolute;
     height: 300px;
     width: 440px;
-    background-color:rgb(143, 218, 230, 0.8) ;
+    background-color: rgb(143, 218, 230, 0.8);
     margin-right: 20px;
     margin-top: 10px;
     left: 10px;
     border-radius: 20px;
-    
-    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+
 }
 
 
 
-.hospital2{
-     /*position: absolute;*/ 
+.hospital2 {
+    /*position: absolute;*/
     height: 300px;
     width: 440px;
     margin-right: 90px;
-    background-color:rgba(143, 218, 230, 0.8) ;
+    background-color: rgba(143, 218, 230, 0.8);
     margin-left: 0px;
     margin-top: 10px;
     align-items: center;
-    
+
     border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 
-.hospital3{
+.hospital3 {
     position: absolute;
     height: 300px;
     width: 440px;
     right: 10px;
-    background-color:rgb(143, 218, 230, 0.8) ;
+    background-color: rgb(143, 218, 230, 0.8);
     margin-right: 90px;
     margin-top: 10px;
     align-items: center;
     border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
-.pic{
+
+.pic {
     display: inline;
 }
-.pic img{
-    height: 150px;
-    width: 215px;
-    border-radius: 50px;
-    
-}
-.des{
-    
-    color: white;
-}
-.info{
-    height: 150px;
-    width: 215px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: rgb(13, 0, 0);
-    border-top-right-radius: 50px;
-    /* display: inline; */
-    /* border: 2px solid red; */
+
+.pic img {
+    height: 250px;
+    width: 200px;
+    border-radius: 5px;
+    border: red solid 2px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 
-.tp2{
-    
+.info {
+   border: 2px solid purple;
+   height: 250px;
+   width: 200px;
+   float: left;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   margin-top: 10px;
+}
+
+
+.tp2 {
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    margin-bottom: 10px;
+
+    margin-bottom: 5px;
     padding-top: 2px;
 }
 
 
-.hospital4{
+.hospital4 {
     position: absolute;
     height: 300px;
     width: 440px;
-    background-color:rgba(143, 218, 230, 0.8) ;
+    background-color: rgba(143, 218, 230, 0.8);
     margin-right: 20px;
     margin-top: 10px;
     left: 10px;
     border-radius: 20px;
-    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
 }
 
 
 
-.hospital5{
-     /*position: absolute;*/ 
+.hospital5 {
+    /*position: absolute;*/
     height: 300px;
     width: 440px;
     margin-right: 90px;
-    background-color:rgba(143, 218, 230, 0.8) ;
+    background-color: rgba(143, 218, 230, 0.8);
     margin-left: 0px;
     margin-top: 10px;
     align-items: center;
-    
+
     border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 
-.hospital6{
+.hospital6 {
     position: absolute;
     height: 300px;
     width: 440px;
     right: 10px;
-    background-color:rgba(143, 218, 230, 0.8) ;
+    background-color: rgba(143, 218, 230, 0.8);
     margin-right: 90px;
     margin-top: 10px;
     align-items: center;
     border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 
 
-.btn{
+.btn {
     position: absolute;
     right: 30px;
 }
 
 
-.tp3{
-    
+.tp3 {
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     margin-bottom: 10px;
     padding-top: 2px;
 }
 
 
-.hospital7{
+.hospital7 {
     position: absolute;
     height: 300px;
     width: 440px;
-    background-color:rgba(143, 218, 230, 0.8) ;
+    background-color: rgba(143, 218, 230, 0.8);
     margin-right: 20px;
     margin-top: 10px;
     left: 10px;
     border-radius: 20px;
-    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
 }
 
 
 
-.hospital8{
-     /*position: absolute;*/ 
+.hospital8 {
+    /*position: absolute;*/
     height: 300px;
     width: 440px;
     margin-right: 90px;
-    background-color:rgba(143, 218, 230, 0.8) ;
+    background-color: rgba(143, 218, 230, 0.8);
     margin-left: 0px;
     margin-top: 10px;
     align-items: center;
-    
+
     border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 
-.hospital9{
+.hospital9 {
     position: absolute;
     height: 300px;
     width: 440px;
     right: 10px;
-    background-color:rgba(143, 218, 230, 0.8) ;
+    background-color: rgba(143, 218, 230, 0.8);
     margin-right: 90px;
     margin-top: 10px;
     align-items: center;
     border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 
 
-.btn{
+.btn {
     position: absolute;
     right: 30px;
 }
 
 
-.tp4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 2px ;
-    padding: 300px;
+
+
+.servhead {
+    padding-top: 2px;
 }
 
-.servhead{
-  padding-top: 2px;
+#Other_Services {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 20px;
+    font-size: larger;
+}
+
+
+.OtherServicesDivision {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.tp4 {
+    background-color: rgba(143, 218, 230, 0.8);
+    margin-top: 50px;
+    height: 530px;
+    width: 500px;
+    margin-right: 150px;
+
+
+    box-shadow: 5px 5px 5px rgb(101, 188, 217);
+    margin-bottom: 200px;
+    border-radius: 30px;
+
+}
+
+
+.tp5 {
+    background-color: rgba(143, 218, 230, 0.8);
+
+    height: 530px;
+    width: 500px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgb(101, 188, 217);
+    margin-top: 50px;
+    margin-right: 30px;
+
+}
+
+.AI{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 20px;
+}
+
+.Delivery{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 20px;
 }
