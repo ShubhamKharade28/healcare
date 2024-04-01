@@ -9,7 +9,7 @@ import Background from '../components/Background';
 
 const Services = () => {
     return (
-        <main>
+        < main className="flex flex-col w-screen relative">
             <Navbar/>
             <h5 id="heading"> Hospitals</h5>
             <div class="tp">
