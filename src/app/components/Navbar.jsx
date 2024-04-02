@@ -12,7 +12,7 @@ const Navbar = () => {
     const [navToggle, setNavToggle] = useState(false);
 
     return (
-        <main className="w-full">
+        <main className="w-full h-20 lg:h-full">
             <nav className="mx-10 hidden md:flex items-center justify-between my-5 gap-3 text-white">
                 <section className="flex items-center justify-between w-full px-3 py-3 bg-[#1a759f] rounded-full"
                     style={{
@@ -42,26 +42,28 @@ const Navbar = () => {
 
             {navToggle ? (
                 <motion.nav
-                    className="md:hidden flex flex-col py-5 fixed top-0 left-0 theme-bg gap-11
-                         text-white w-2/3 h-screen items-center"
+                    className="md:hidden flex flex-col py-5 fixed top-0 left-0 theme-bg gap-20 pt-16
+                         text-white w-4/5 h-screen items-center"
                     initial={{x: -100}}
                     animate={{x: 0}}
                     transition={{
                         duration: 0.4,
-                        type: 'spring',
                     }}
                 >
-                    <button className="text-3xl self-end pt-3 hover:scale-90 px-5"
-                        onClick={() => setNavToggle(false)}
-                    >
-                        <RxCross2 />
-                    </button>
-                    <logo className="flex items-center gap-3">
-                        <span className="bg-white rounded-full h-12">
-                            <Image src={healCareLogo} className="h-full w-auto"/>
-                        </span>
-                        <span className="text-2xl font-bold">HealCare</span>
-                    </logo>
+                    <div className="flex items-center w-full justify-evenly">
+                        <logo className="flex items-center gap-2">
+                            <span className="bg-white rounded-full h-10">
+                                <Image src={healCareLogo} className="h-full w-auto"/>
+                            </span>
+                            <span className="text-xl font-bold">HealCare</span>
+                        </logo>
+                        <button className="text-3xl hover:scale-90 px-5"
+                            onClick={() => setNavToggle(false)}
+                        >
+                            <RxCross2 />
+                        </button>
+                    </div>
+                    
                     <menu className="flex flex-col items-center">
                         <LinkTo label="Home" path="/" />
                         <LinkTo label="Services" path="/services" />

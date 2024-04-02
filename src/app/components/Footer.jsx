@@ -8,7 +8,7 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className="flex px-5 lg:px-28 py-7 md:py-10 items-center md:items-start justify-between bg-[#1a759f] text-white text-xs
+        <footer className="w-full flex px-5 lg:px-28 py-7 md:py-10 items-center md:items-start justify-between bg-[#1a759f] text-white text-xs
                 md:text-base">
             <div className="flex flex-col gap-5 items-start">
                 <div className="flex gap-2 md:gap-3 items-center">
