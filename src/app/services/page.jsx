@@ -2,7 +2,7 @@ import './services.css';
 import Image from 'next/image';
 import healCareLogo from '@/assets/images/healcare_logo.jpg';
 import LOGo from '@/assets/images/hospital-profile.jpeg';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import Background from '../components/Background';
 
 

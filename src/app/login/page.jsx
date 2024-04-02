@@ -1,7 +1,7 @@
 'use client';
 
 import Background from "../components/Background";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import Link from "next/link";
 import "./login.css"
 import Footer from "../components/Footer";

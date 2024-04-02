@@ -1,6 +1,6 @@
 import React from 'react'
 import "./bookappointment.css"
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar/Navbar'
 import Background from '../components/Background'
 import Footer from '../components/Footer'
 
