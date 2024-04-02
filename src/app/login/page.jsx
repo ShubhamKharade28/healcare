@@ -27,7 +27,7 @@ const Login = () => {
                     <input type="Email" placeholder="Phone Number or Email" required
                         value={userid} onChange={(e) => setUserId(e.target.value)}
                     />
-                    {/* span section containg password input field and forgoit password text */}
+                    {/* span section containg password input field and forgot password text */}
                     <span>
                         <input type="password" placeholder="Password" 
                             value={password} onChange={(e) => setPassword(e.target.value)}

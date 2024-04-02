@@ -1,3 +1,4 @@
+/* 
 main{
     width: 100vw;
     height: 100vh;
@@ -6,13 +7,13 @@ main{
     box-sizing: border-box;
 }
 
-/* Formating the Appointment Booking form */
+Formating the Appointment Booking form
 form{
-    background-color: aqua;
-    height: 80%;
-    width: 80%;
+    background-color: #1A759F;
     margin: 2rem auto;
     padding: 2rem 5rem;
+
+    @apply w-fit;
 }
 form h1{
     text-align: center;
@@ -24,9 +25,12 @@ form{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    border-radius: 0.5rem;
 }
-form input {
+form input ,select{
     width: 15rem;
+    border-radius: 0.25rem;
+    text-align: center;
 }
 
 .oneline{
@@ -34,10 +38,19 @@ form input {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    column-gap: 3rem;
 }
 label{
-    width: 6rem;
+    width: 15rem;
 }
-.full{
-    
-}
+
+button{
+    width: max-content;
+    background-color:#00A5EC ;
+    padding: .5rem 3rem;
+    align-self: center;
+    margin-top: 3rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    color: #ffff;
+} */

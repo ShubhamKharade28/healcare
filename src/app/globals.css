@@ -25,3 +25,11 @@
   background-size: cover;
   background-repeat: none;
 }
+
+.theme-color {
+  color: #1a759f;
+}
+
+.theme-bg {
+  background: #1a759f;
+}
