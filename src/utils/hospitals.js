@@ -1,8 +1,9 @@
 
 const Hospitals = [
     {
+        id: 1,
         name: 'Global Hospital',
-        address: 'ITI Corner, VIP Rd, opposite Cooperative Bank, Industrial Estate, Vishnu Nagar, Nanded, Nanded-Waghala, Maharashtra 431601',
+        address: 'ITI Corner, VIP Rd, Vishnu Nagar, Nanded Maharashtra 431601',
         website: 'www.globalsuperspecialtyhospital.com',
         email: 'global@gmail.com',
         time: '24 hours',
@@ -14,6 +15,7 @@ const Hospitals = [
             {name: 'General Physicial', doctor: 'Dr. Yash Kadam'}
         ]
     },{
+        id: 2,
         name: 'Care Hospital',
         address: 'Shivaji chowk, near bus stand , Goregaon, mangaon-402103',
         website: 'www.carehospital.com',
@@ -27,8 +29,9 @@ const Hospitals = [
             {name: 'General Physician', doctor: 'Dr. Sumitra Goregaonkar'},
         ]
     },{
-        name: 'Sanjivani Hospital',
-        address: 'Ram nagar near chavdar taie , Mahad,Raigad, Maharashtra',
+        id: 3,
+        name: 'Sanjeevani Hospital',
+        address: 'Ram nagar near chavdar tale, Mahad,Raigad, Maharashtra',
         website: 'www.sanjivanihospital.com',
         email: 'sanjivani@gmail.com',
         time: '24 hours',
@@ -40,6 +43,7 @@ const Hospitals = [
             {name: 'General Physician', doctor: 'Dr. Geetha Mahajan'},
         ]
     },{
+        id: 4,
         name: 'Criti Care Hospital',
         address: 'Opp of bus stand near SBI , Mangaon,Raigad, Maharashtra',
         website: 'www.criticarehospital.com',
@@ -53,6 +57,7 @@ const Hospitals = [
             {name: 'General Physician', doctor: 'Dr. Laxman Jadhav'},
         ]
     },{
+        id: 5,
         name: 'Sukhkarta Hospital',
         address: 'Opp of bus stand near BOB , goregaon,Raigad, Maharashtra',
         website: 'www.sukhkartahospital.com',

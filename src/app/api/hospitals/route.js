@@ -2,6 +2,6 @@
 import Hospitals from "@/utils/hospitals";
 import { NextResponse } from "next/server";
 
-export function GET(){
+export async function GET(){
     return NextResponse.json(Hospitals);
 }

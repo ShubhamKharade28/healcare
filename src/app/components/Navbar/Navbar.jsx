@@ -39,11 +39,10 @@ const Navbar = () => {
                         </profile>
                 }
             </nav>
-
             {navToggle ? (
                 <motion.nav
-                    className="md:hidden flex flex-col py-5 fixed top-0 left-0 theme-bg gap-20 pt-16
-                         text-white w-4/5 h-screen items-center"
+                    className="flex md:hidden flex-col py-5 fixed top-0 left-0 theme-bg gap-20 pt-16
+                         text-white w-full h-screen items-center"
                     initial={{x: -100}}
                     animate={{x: 0}}
                     transition={{
@@ -63,7 +62,6 @@ const Navbar = () => {
                             <RxCross2 />
                         </button>
                     </div>
-                    
                     <menu className="flex flex-col items-center">
                         <LinkTo label="Home" path="/" />
                         <LinkTo label="Services" path="/services" />
@@ -78,12 +76,20 @@ const Navbar = () => {
                 </motion.nav>
                 ) 
                 : (
-                <button className="md:hidden absolute top-5 left-5 theme-bg rounded-lg p-2 text-white text-3xl hover:scale-90"
-                    onClick={() => setNavToggle(true)}
-                    style={{boxShadow: '1px 2px 4px rgba(0,0,0,0.5)'}}
-                >
-                    <CgMenu />  
-                </button>)
+                <nav className="md:hidden theme-bg flex text-white w-screen py-2 px-5 justify-between">
+                    <button className="md:hidden theme-bg rounded-lg p-2 text-3xl hover:scale-90"
+                        onClick={() => setNavToggle(true)}
+                    >
+                        <CgMenu />  
+                    </button>
+                    <logo className="flex items-center gap-10 mx-10">
+                        <span className="text-xl font-bold">HealCare</span>
+                        <span className="bg-white rounded-full h-9">
+                            <Image src={healCareLogo} className="h-full w-auto"/>
+                        </span>
+                    </logo>
+                </nav>
+               )
             }
         </main>
     )
@@ -94,7 +100,7 @@ const LinkTo = ({label,path}) => {
     <Link 
         href={path}
         className="hover:opacity-90 hover:scale-90 transition-all duration-200 text-lg hover:border-y border-y-gray-200 w-full
-            py-3 px-20 font-semibold
+            py-3 px-20 font-semibold text-center
         "
     >
         {label}

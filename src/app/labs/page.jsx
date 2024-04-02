@@ -2,22 +2,21 @@
 
 import Navbar from "../components/Navbar/Navbar";
 import { useEffect, useState } from "react";
-import HospitalCard from "../components/hospitals/HospitalCard";
+import LabCard from "../components/labs/LabCard";
 import Footer from "../components/Footer";
 import Background from "../components/Background";
 
-function HospitalsPage() {
-  const [hospitals, setHospitals] = useState([]);
+function LabsPage() {
+  const [labs, setLabs] = useState([]);
 
   useEffect(() => {
-    getHospitals();
+    getLabs();
   }, []);
 
-  const getHospitals = async () => {
-    let res = await fetch("/api/hospitals");
+  const getLabs = async () => {
+    let res = await fetch("/api/labs");
     res = await res.json();
-    console.log(res);
-    setHospitals(res);
+    setLabs(res);
   };
 
   return (
@@ -26,15 +25,15 @@ function HospitalsPage() {
       <Navbar />
       <section className="w-full flex flex-col md:grid grid-cols-3 gap-4 md:gap-7 px-4 md:px-10 my-5 md:my-10">
       {
-        hospitals.map((hospital) => (
-          <HospitalCard hospital={hospital}  key={hospital.id}
-          />))
+        labs.map((lab) => (
+          <LabCard lab={lab}  key={lab.id}/>
+        ))
       }
       </section>
-      <div className="h-[40vh]"></div>
+      <div className="h-[20vh]"></div>
       <Footer />
     </main>
   );
 }
 
-export default HospitalsPage;
+export default LabsPage;

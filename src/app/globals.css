@@ -33,3 +33,7 @@
 .theme-bg {
   background: #1a759f;
 }
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
