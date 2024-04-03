@@ -13,15 +13,12 @@ const Navbar = () => {
 
     return (
         <main className="w-full h-20 lg:h-full">
-            <nav className="mx-10 hidden md:flex items-center justify-between my-5 gap-3 text-white">
+            <nav className="mx-10 hidden md:flex items-center justify-between mt-5 mb-1 gap-3 text-white">
                 <section className="flex items-center justify-between w-full px-3 py-3 bg-[#1a759f] rounded-full"
-                    // style={{
-                    //     boxShadow: '1px 5px 10px rgb(0,0,0,0.3)',
-                    // }}
                 >
                     <logo className="flex items-center gap-3">
                         <span className="bg-white rounded-full h-12">
-                            <Image src={healCareLogo} className="h-full w-auto"/>
+                            <Image src={healCareLogo} className="h-full w-auto" alt="logo"/>
                         </span>
                         <span className="text-2xl font-bold">HealCare</span>
                     </logo>
@@ -29,7 +26,7 @@ const Navbar = () => {
                         <Link href="/" className="hover:opacity-90 hover:scale-90 transition-all duration-200">Home</Link>
                         <Link href="/services" className="hover:opacity-90 hover:scale-90 transition-all duration-200">Services</Link>
                         <Link href="/aboutus" className="hover:opactiy-90 hover:scale-90 transition-all duration-200">About us</Link>
-                        <Link href="/home" className="hover:opacity-90 hover:scale-90 transition-all duration-200">Contact us</Link>
+                        <Link href="/contactus" className="hover:opacity-90 hover:scale-90 transition-all duration-200">Contact us</Link>
                     </menu>
                     <Link href="/gfa" className="bg-[#4493b7] py-3 px-5 font-semibold rounded-full">Get Free Advice</Link>
                 </section>
@@ -42,7 +39,7 @@ const Navbar = () => {
             {navToggle ? (
                 <motion.nav
                     className="flex md:hidden flex-col py-5 fixed top-0 left-0 theme-bg gap-20 pt-16
-                         text-white w-full h-screen items-center"
+                         text-white w-2/3 h-screen items-center"
                     initial={{x: -100}}
                     animate={{x: 0}}
                     transition={{
@@ -52,7 +49,7 @@ const Navbar = () => {
                     <div className="flex items-center w-full justify-evenly">
                         <logo className="flex items-center gap-2">
                             <span className="bg-white rounded-full h-10">
-                                <Image src={healCareLogo} className="h-full w-auto"/>
+                                <Image src={healCareLogo} className="h-full w-auto" alt="logo"/>
                             </span>
                             <span className="text-xl font-bold">HealCare</span>
                         </logo>
@@ -85,7 +82,7 @@ const Navbar = () => {
                     <logo className="flex items-center gap-10 mx-10">
                         <span className="text-xl font-bold">HealCare</span>
                         <span className="bg-white rounded-full h-9">
-                            <Image src={healCareLogo} className="h-full w-auto"/>
+                            <Image src={healCareLogo} className="h-full w-auto" alt="logo"/>
                         </span>
                     </logo>
                 </nav>

@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Link from "next/link";
 
-const Signup = () => {
+const SignIn = () => {
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
 
@@ -54,4 +54,4 @@ const Signup = () => {
     )
 }
 
-export default Signup;
+export default SignIn;

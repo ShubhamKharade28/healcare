@@ -5,6 +5,7 @@ import Background from "../components/Background";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Signup = () => {
     const [name, setName] = useState('');
@@ -14,8 +15,9 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [medHistory, setMedHistory] = useState('');
     const [gender, setGender] = useState('');
+    const router = useRouter();
 
-    const handleSignup = (e) => {
+    const handleSignup = async (e) => {
         e.preventDefault();
         if(!name) {
             alert('Please enter your name');
@@ -31,6 +33,26 @@ const Signup = () => {
         if(!dob){
             alert('Please enter your date of birth')
         }
+        if(!gender){
+            alert('Please select your gender')
+        }
+        let body = {
+            name, email, phone, gender, dob, medHistory, password
+        };
+        let res = await fetch('/api/signup', {
+            method: 'POST',
+            body: JSON.stringify(body),
+        });
+
+        res = await req.json();
+        if(!req.ok){
+            alert(req.message);
+            return;
+        }
+        alert('Signed up successfully');
+        body.id = req.id;
+        localStorage.setItem('user', JSON.stringify(body));
+        router.push('/');
     }
 
     return (
@@ -53,14 +75,17 @@ const Signup = () => {
                     className="outline-none py-2 px-3 rounded-lg border"
                     value={phone} onChange={(e) => setPhone(e.target.value)}
                 />
-                <input type="date" 
-                    placeholder="Date of Birth"
-                    className="outline-none py-2 px-3 rounded-lg border"
-                    value={dob} onChange={(e) => setDob(e.target.value)}
-                />
+                <span className="flex items-center w-full justify-between bg-white rounded-lg border">
+                    <div className="text-gray-600 px-2 text-sm md:text-base">Date of Birth  </div>
+                    <input type="date" 
+                        placeholder="Date of Birth"
+                        className="outline-none py-2 px-3 rounded-lg w-2/3"
+                        value={dob} onChange={(e) => setDob(e.target.value)}
+                    />
+                </span>
+                
                 <select className="outline-none py-2 px-3 rounded-lg border"
                     onChange={(e) => setGender(e.target.value)}
-                    value={gender}
                 >
                     <option selected disabled className="outline-none py-2 px-3 rounded-lg border">Gender</option>
                     <option value="Male" className="outline-none py-2 px-3 rounded-lg border">Male</option>
