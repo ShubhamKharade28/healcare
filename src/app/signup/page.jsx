@@ -4,6 +4,7 @@ import { useState } from "react";
 import Background from "../components/Background";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import Link from "next/link";
 
 const Signup = () => {
     const [name, setName] = useState('');
@@ -75,11 +76,15 @@ const Signup = () => {
                     value={password} onChange={(e) => setPassword(e.target.value)}
                 />
                 <button 
-                    className="theme-bg text-white rounded-lg py-2 font-bold text-sm my-2"
+                    className="theme-bg text-white rounded-lg py-2 font-bold text-sm my-1"
                     onClick={handleSignup}
                 >
                     Sign Up
                 </button>
+                <span className="w-full flex justify-center gap-2 text-xs md:text-sm my-2">
+                    Already an user? 
+                    <Link href="/signin" className="theme-color font-bold">Sign In</Link>
+                </span>
             </form>
             <Footer/>
         </main>
