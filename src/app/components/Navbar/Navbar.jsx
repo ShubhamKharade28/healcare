@@ -15,9 +15,9 @@ const Navbar = () => {
         <main className="w-full h-20 lg:h-full">
             <nav className="mx-10 hidden md:flex items-center justify-between my-5 gap-3 text-white">
                 <section className="flex items-center justify-between w-full px-3 py-3 bg-[#1a759f] rounded-full"
-                    style={{
-                        boxShadow: '1px 5px 10px rgb(0,0,0,0.3)',
-                    }}
+                    // style={{
+                    //     boxShadow: '1px 5px 10px rgb(0,0,0,0.3)',
+                    // }}
                 >
                     <logo className="flex items-center gap-3">
                         <span className="bg-white rounded-full h-12">

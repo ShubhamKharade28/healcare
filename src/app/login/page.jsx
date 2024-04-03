@@ -1,51 +1,52 @@
 'use client';
 
-import Background from "../components/Background";
-import Navbar from "../components/Navbar/Navbar";
-import Link from "next/link";
-import "./login.css"
-import Footer from "../components/Footer";
 import { useState } from "react";
+import Background from "../components/Background";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
 
-const Login = () => {
-    const [userid, setUserId] = useState('');
+const Signup = () => {
+    const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = (e) =>{
+    const handleLogin = (e) => {
+        if(!userId){
+            alert('Please enter email or phone number');
+            return;
+        }
+        if(!password) {
+            alert('Please enter your password');
+            return;
+        }
         e.preventDefault();
-
-        // Logic to handle login click
     }
 
     return (
-        <main className="flex flex-col w-screen relative">
-            <Background />
+        <main className="w-screen min-h-screen flex flex-col relative items-center">
+            <Background/>
             <Navbar/>
-            <cards className="h-4/5">
-                <card>
-                    <h1 className="text-white">Login</h1>
-                    <input type="Email" placeholder="Phone Number or Email" required
-                        value={userid} onChange={(e) => setUserId(e.target.value)}
-                    />
-                    {/* span section containg password input field and forgot password text */}
-                    <span>
-                        <input type="password" placeholder="Password" 
-                            value={password} onChange={(e) => setPassword(e.target.value)}
-                        />
-                        <Link href="/forgotpass" id="forgot">Forgot password?</Link>
-                    </span>
-                    {/* LOGIN button */}
-                    <button onClick={handleLogin}>LOGIN</button>  
-                    
-                    {/* NEW User Signup */}
-                    <p>New User? 
-                        <Link href="/signup" id="signUp" value="Submit">Sign Up</Link>
-                    </p>
-                </card>
-            </cards>
+            <form className="h-1/2 bg-[#ffffffb2] py-3 md:px-5 px-3 flex flex-col gap-3 w-4/5 md:w-1/2 lg:w-2/5 my-20 rounded-xl text-sm md:text-base"
+                style={{boxShadow: '1px 1px 10px rgba(0,0,0,0.2)'}}
+            >
+                <h2 className="theme-color font-bold w-full text-center my-5 md:my-7 text-xl">Sign in to continue</h2>
+                <input placeholder="Email or phone number" 
+                    className="outline-none py-3 px-4 rounded-lg border"
+                    value={userId} onChange={(e) => setUserId(e.target.value)}
+                />
+                <input placeholder="password" type="password"
+                    className="outline-none py-3 px-4 rounded-lg border"
+                    value={password} onChange={(e) => setPassword(e.target.value)}
+                />
+                <button 
+                    className="theme-bg text-white rounded-lg py-2 font-bold my-5 md:my-7"
+                    onClick={handleLogin}
+                >
+                    Sign In
+                </button>
+            </form>
             <Footer/>
         </main>
     )
 }
 
-export default Login;
+export default Signup;

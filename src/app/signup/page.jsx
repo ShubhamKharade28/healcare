@@ -1,106 +1,86 @@
+'use client';
+
+import { useState } from "react";
 import Background from "../components/Background";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar/Navbar";
-import "./signup.css"
+
 const Signup = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [dob, setDob] = useState('');
+    const [password, setPassword] = useState('');
+    const [medHistory, setMedHistory] = useState('');
+    const [gender, setGender] = useState('');
+
+    const handleSignup = (e) => {
+        e.preventDefault();
+        if(!name) {
+            alert('Please enter your name');
+            return;
+        }
+        if(!email) {
+            alert('Please enter your email');
+            return;
+        }
+        if(!phone) {
+            alert('Please enter your phone number');
+        }
+        if(!dob){
+            alert('Please enter your date of birth')
+        }
+    }
+
     return (
-        <main>
+        <main className="w-screen min-h-screen flex flex-col relative items-center">
             <Background/>
             <Navbar/>
-            {/* Thois the tag containing the card element */}
-            <cards>
-                {/* This is the Card */}
-                <form>
-                    {/* heading of the card */}
-                    <h1>Sigup to HealCare</h1>
-                    <section className="PersonalDetail">
-                        <h2>Personal Details</h2>
-                        <div className="inputs">
-                            <div className="name">
-                                <label htmlFor="Name">Name: </label>
-                                <input type="text" id="Name" required />
-                            </div>  
-                        
-                            <div className="oneLine">
-
-                                <div>
-                                    <label htmlFor="DOB">Date of Birth: </label>
-                                    <input type="Date" id="DOB" required/>
-                                </div>
-
-                                <div>
-                                    <label htmlFor="Gender">Gender:  </label>
-                                    <select name="Gender" id="Gender" required>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="oneLine">                                
-                                <div>
-                                    <label htmlFor="pNo">Phone No: </label>
-                                    <input type="Numbers" id="pNo" required/>
-                                </div>
-    
-                                <div>
-                                    <label htmlFor="Email">Email: </label>
-                                    <input type="email" id="Email" />
-                                </div>
-                            </div>
-
-                            <div className="address">
-                                <label htmlFor="Address">Address</label>
-                                <textarea name="Address" id="Address" cols="66" rows="3" required></textarea>
-                            </div>
-                        </div>
-
-                        
-
-                    </section>
-
-                    <section2>
-                        <h2>Medical Details</h2>
-                        <div className="Med_details">
-
-
-                            <div>
-                                <label htmlFor="BloodGrp">Blood Group: </label>
-                                <select name="BloodGrp" id="BloodGrp">
-                                    <option value="O-">O-</option>
-                                    <option value="O+">O+</option>
-                                    <option value="A-">A-</option>
-                                    <option value="A+">A+</option>
-                                    <option value="B-">B-</option>
-                                    <option value="B+">B+</option>
-                                    <option value="AB-">AB-</option>
-                                    <option value="AB+">AB+</option>
-                                </select>
-                            </div>
-
-
-                            <div>
-                                <label htmlFor="Weight">Weight: </label>
-                                <input type="Numbers" id="Weight"/>
-                            </div>
-
-
-                            <div>
-                                <label htmlFor="Height">Height:</label>
-                                <input type="Numbers" id="Height" required/>
-                            </div>
-
-
-                            <div>
-                                <label htmlFor="Allergies">Allergies: </label>
-                                <input type="text" id="Allergies" required/>
-                            </div>
-                        </div>
-                    </section2>
-                    <div className="signup"><button >Sign Up</button></div>
-                </form>
-            </cards>
+            <form className="h-1/2 bg-[#ffffffb2] py-2 px-3 flex flex-col gap-3 w-4/5 md:w-1/2 lg:w-2/5 mt-5 mb-10 rounded-xl text-sm md:text-base"
+                style={{boxShadow: '1px 1px 10px rgba(0,0,0,0.2)'}}
+            >
+                <h2 className="theme-color font-bold w-full text-center my-3 text-xl">Create Account</h2>
+                <input placeholder="Full Name" 
+                    className="outline-none py-2 px-3 rounded-lg border"
+                    value={name} onChange={(e) => setName(e.target.value)}
+                />
+                <input placeholder="Email" type="email"
+                    className="outline-none py-2 px-3 rounded-lg border"
+                    value={email} onChange={(e) => setEmail(e.target.value)}
+                />
+                <input placeholder="Phone number"
+                    className="outline-none py-2 px-3 rounded-lg border"
+                    value={phone} onChange={(e) => setPhone(e.target.value)}
+                />
+                <input type="date" 
+                    placeholder="Date of Birth"
+                    className="outline-none py-2 px-3 rounded-lg border"
+                    value={dob} onChange={(e) => setDob(e.target.value)}
+                />
+                <select className="outline-none py-2 px-3 rounded-lg border"
+                    onChange={(e) => setGender(e.target.value)}
+                    value={gender}
+                >
+                    <option selected disabled className="outline-none py-2 px-3 rounded-lg border">Gender</option>
+                    <option value="Male" className="outline-none py-2 px-3 rounded-lg border">Male</option>
+                    <option value="Female" className="outline-none py-2 px-3 rounded-lg border">Female</option>
+                    <option value="Other" className="outline-none py-2 px-3 rounded-lg border">Other</option>
+                </select>
+                <input placeholder="Medical history in short (optional)"
+                    className="outline-none py-2 px-3 rounded-lg border"
+                    value={medHistory} onChange={(e) => setMedHistory(e.target.value)}
+                />
+                <input placeholder="Create password" type="password"
+                    className="outline-none py-2 px-3 rounded-lg border"
+                    value={password} onChange={(e) => setPassword(e.target.value)}
+                />
+                <button 
+                    className="theme-bg text-white rounded-lg py-2 font-bold text-sm my-2"
+                    onClick={handleSignup}
+                >
+                    Sign Up
+                </button>
+            </form>
             <Footer/>
         </main>
     )

@@ -37,3 +37,7 @@
 .scroll-hidden::-webkit-scrollbar {
   display: none;
 }
+
+button.theme-bg:hover {
+  background: #1a759fd2;
+}
