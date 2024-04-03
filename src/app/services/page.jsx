@@ -66,7 +66,7 @@ const Services = () => {
       <section className="w-full py-8 px-3 md:px-10 flex flex-col gap-3 md:gap-5">
         <h2 className="text-2xl font-semibold px-3 flex w-full justify-between items-end">
             <span>Medical Stores</span>
-            <Link className="text-base px-3" href="/labs">See all</Link>
+            <Link className="text-base px-3" href="/stores">See all</Link>
         </h2>
         <div className="flex flex-col md:grid grid-cols-3 gap-3 md:gap-5">
         { stores.length ? stores.map((store) => <StoreCard store={store}/>) : <></>}
