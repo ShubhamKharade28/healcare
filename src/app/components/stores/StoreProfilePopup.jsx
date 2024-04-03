@@ -1,17 +1,14 @@
 'use client';
 import { motion } from "framer-motion";
 import Image from "next/image";
-import labProfileImage from '@/assets/images/hospital-profile.jpeg';
+import storeProfileImage from '@/assets/images/hospital-profile.jpeg';
 import { MdOutlineEmail, MdPhone, MdOutlineLocationOn } from 'react-icons/md';
-import { GiHypodermicTest } from "react-icons/gi";
 
-
-function LabProfilePopup({closePopup, lab}){
-    const name = lab.name;
-    const address =  lab.address;
-    const email = lab.email
-    const phone = lab.phone;
-    const tests = lab.tests;
+function StoreProfilePopup({closePopup, store}){
+    const name = store.name;
+    const address =  store.address;
+    const email = store.email
+    const phone = store.phone;
 
     return(
         <div 
@@ -28,7 +25,7 @@ function LabProfilePopup({closePopup, lab}){
             >
                 <div className="flex flex-col md:flex-row gap-4 md:gap-5">
                     <div className="w-28 h-28 md:h-64 md:w-1/3 rounded-lg overflow-hidden">
-                        <Image src={labProfileImage} className="h-full w-full object-cover" />
+                        <Image src={storeProfileImage} className="h-full w-full object-cover" />
                     </div>
                     <div className="w-4/5 md:w-2/3 flex flex-col gap-1 md:gap-1.5 text-sm">
                         <h1 className="font-bold text-lg md:text-4xl mb-0.5 md:mb-2">{name}</h1>
@@ -44,13 +41,10 @@ function LabProfilePopup({closePopup, lab}){
                             <MdPhone className="text-sm md:text-lg text-gray-700"/>
                             {phone}
                         </span>
-                        <span className="flex gap-2 items-center text-xs md:text-sm">
-                            <GiHypodermicTest className="text-sm md:text-lg text-gray-700"/>
-                            {tests}
-                        </span>
+                        
                         <button className="bg-blue-500 hover:bg-blue-700 justify-self-end text-white text-sm md:text-base
                              px-3 md:px-4 py-1.5 md:py-2 rounded w-fit mt-2">
-                            Book an Appointment</button>
+                            Order from Store</button>
                     </div>
                 </div>
             </motion.div>
@@ -58,4 +52,4 @@ function LabProfilePopup({closePopup, lab}){
     );
 }
 
-export default LabProfilePopup;
+export default StoreProfilePopup;
