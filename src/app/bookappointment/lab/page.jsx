@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar/Navbar";
-import Background from "../components/Background";
-import Footer from "../components/Footer";
+import Navbar from "@/app/components/Navbar/Navbar";
+import Background from "@/app/components/Background";
+import Footer from "@/app/components/Footer";
 
 function BookAppointment() {
   const [hospitals, setHospitals] = useState([]);

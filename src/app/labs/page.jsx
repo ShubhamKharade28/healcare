@@ -1,10 +1,10 @@
 "use client";
 
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "@/app/components/Navbar/Navbar";
 import { useEffect, useState } from "react";
-import LabCard from "../components/labs/LabCard";
-import Footer from "../components/Footer";
-import Background from "../components/Background";
+import LabCard from "@/app/components/labs/LabCard";
+import Footer from "@/app/components/Footer";
+import Background from "@/app/components/Background";
 
 function LabsPage() {
   const [labs, setLabs] = useState([]);
