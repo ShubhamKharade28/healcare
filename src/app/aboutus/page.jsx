@@ -27,17 +27,32 @@ const Aboutus = () => {
                 </div>
             </div>
             <div className="flex justify-end w-full relative h-fit">
-            <div className="w-4/5 md:w-1/2 h-auto relative">
+                <div className="w-4/5 md:w-1/2 h-auto relative">
                     <Image src={cloudTwoImg} className="w-full h-auto"/>
                     <span className="absolute z-10 top-[37%] md:top-[43%] right-12 md:right-32 text-sm md:text-xl font-semibold theme-color-dark
                         flex flex-col gap-3 items-end md:items-center
                     ">
-                       <h3 className="font-semibold text-base md:text-3xl">Services provides by us,</h3>
-                       <ul className="flex flex-col items-start gap-2 w-60 font-normal">
+                        <h3 className="font-semibold text-base md:text-3xl">Services provides by us,</h3>
+                        <ul className="flex flex-col items-start gap-2 w-60 font-normal">
                         <li>1. Appointment booking with Hospitals & Labs</li>
                         <li>2. Home Delivery from Medical Stores</li>
                         <li>3. AI advice</li>
-                       </ul>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+            <div className="flex justify-end w-full relative h-fit">
+                <div className="w-4/5 md:w-1/2 h-auto relative">
+                    <Image src={cloudTwoImg} className="w-full h-auto"/>
+                    <span className="absolute z-10 top-[37%] md:top-[43%] right-12 md:right-32 text-sm md:text-xl font-semibold theme-color-dark
+                        flex flex-col gap-3 items-end md:items-center
+                    ">
+                        <h3 className="font-semibold text-base md:text-3xl">Services provides by us,</h3>
+                        <ul className="flex flex-col items-start gap-2 w-60 font-normal">
+                        <li>1. Appointment booking with Hospitals & Labs</li>
+                        <li>2. Home Delivery from Medical Stores</li>
+                        <li>3. AI advice</li>
+                        </ul>
                     </span>
                 </div>
             </div>

@@ -28,7 +28,7 @@ const Navbar = () => {
                         <Link href="/aboutus" className="hover:opactiy-90 hover:scale-90 transition-all duration-200">About us</Link>
                         <Link href="/contactus" className="hover:opacity-90 hover:scale-90 transition-all duration-200">Contact us</Link>
                     </menu>
-                    <Link href="/gfa" className="bg-[#4493b7] py-3 px-5 font-semibold rounded-full">Get Free Advice</Link>
+                    <Link href="/aiadvice" className="bg-[#4493b7] py-3 px-5 font-semibold rounded-full">Get AI Advice</Link>
                 </section>
                 {
                     isLogined && <profile>
@@ -65,7 +65,7 @@ const Navbar = () => {
                         <LinkTo label="About us" path="/aboutus" />
                         <LinkTo label="Contact us" path="/contactus" />
                     </menu>
-                    <Link href="/gfa" className="bg-[#4493b7] py-3 px-5 font-semibold rounded-full">Get Free Advice</Link>
+                    <Link href="/aiadvice" className="bg-[#4493b7] py-3 px-5 font-semibold rounded-full">Get AI Advice</Link>
 
                     {isLogined && <profile>
                         <div className="bg-[#1f4152] h-16 w-16 rounded-full"></div>
