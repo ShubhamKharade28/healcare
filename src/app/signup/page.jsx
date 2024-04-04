@@ -44,14 +44,13 @@ const Signup = () => {
             body: JSON.stringify(body),
         });
 
-        res = await req.json();
-        if(!req.ok){
+        res = await res.json();
+        if(!res.ok){
             alert(req.message);
             return;
         }
         alert('Signed up successfully');
-        body.id = req.id;
-        localStorage.setItem('user', JSON.stringify(body));
+        localStorage.setItem('id', res.id);
         router.push('/');
     }
 

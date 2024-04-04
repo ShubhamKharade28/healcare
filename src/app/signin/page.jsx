@@ -10,7 +10,7 @@ const SignIn = () => {
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         if(!userId){
             alert('Please enter email or phone number');
             return;
@@ -20,6 +20,20 @@ const SignIn = () => {
             return;
         }
         e.preventDefault();
+
+        let res = await fetch('/api/signin', {
+            method: 'POST',
+            body: JSON.stringify({userId, password}),
+        });
+
+        res = await res.json();
+        if(!res.ok){
+            alert(res.message);
+            return;
+        };
+
+        alert('Signed in successfully!');
+        localStorage.setItem('id', res.id);
     }
 
     return (
