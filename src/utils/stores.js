@@ -6,7 +6,7 @@ const Stores = [
         address: "ITI Corner, VIP Rd,Industrial Estate, Vishnu Nagar, Nanded 431601",
         email: 'shreemedical@gmail.com',
         phone: '8823462334',
-        homeDelivery: false,
+        homeDelivery: true,
     },{
         id: 2,
         name: 'Utkarsh Medical',
