@@ -30,6 +30,10 @@
   color: #1a759f;
 }
 
+.theme-color-dark {
+  color: #004d70;
+}
+
 .theme-bg {
   background: #1a759f;
 }
@@ -40,4 +44,9 @@
 
 button.theme-bg:hover {
   background: #1a759fd2;
+}
+
+.flip-img {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
 }

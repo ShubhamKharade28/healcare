@@ -103,7 +103,7 @@ function HospitalAppointment() {
 		</span>
 		{(departments && departments.length > 0) && (
 			<span className="flex py-3 px-4 rounded-lg border w-full bg-white justify-between gap-5">
-				<span className="w-1/2">Gender</span>
+				<span className="w-1/2">Departments</span>
 				<select
 					className="outline-none w-full"
 					onChange={(e) => setDepartment(e.target.value)}
