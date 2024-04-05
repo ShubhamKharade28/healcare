@@ -25,3 +25,55 @@
   background-size: cover;
   background-repeat: none;
 }
+
+.theme-color {
+  color: #1a759f;
+}
+
+.theme-color-dark {
+  color: #004d70;
+}
+
+.theme-bg {
+  background: #1a759f;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+button.theme-bg:hover {
+  background: #1a759fd2;
+}
+
+.flip-img {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+}
+
+.ai-bg {
+  background: url('../assets/images/ai-bg.png');
+  background-repeat: repeat;
+}
+
+.ai-nav-bg {
+  background: #2c4968;
+}
+
+.ai-input-bg {
+  background: #2c4968;
+}
+
+.ai-input::placeholder {
+  color: #a7d2ffcc;
+}
+
+.ai-message {
+  background: #2c4968;
+  @apply w-4/5 md:w-2/3 p-2 rounded-lg text-[0.95rem] mx-1 md:mx-0;
+}
+
+.sender-me {
+  color: #2c4968;
+  background: white;
+}

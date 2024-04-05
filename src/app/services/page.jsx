@@ -1,133 +1,81 @@
-import './services.css';
-import Image from 'next/image';
-import healCareLogo from '@/assets/images/healcare_logo.jpg';
-import LOGo from '@/assets/images/hospital-profile.jpeg';
-import Navbar from '../components/Navbar';
-import Background from '../components/Background';
+"use client";
 
-
+import Navbar from "../components/Navbar/Navbar";
+import Background from "../components/Background";
+import Footer from "../components/Footer";
+import HospitalCard from "../components/hospitals/HospitalCard";
+import LabCard from "../components/labs/LabCard";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import StoreCard from "../components/stores/StoreCard"; 
 
 const Services = () => {
-    return (
-        < main className="flex flex-col w-screen relative">
-            <Navbar/>
-            <h5 id="heading"> Hospitals</h5>
-            <div class="tp">
+  const [hospitals, setHospitals] = useState([]);
+  const [labs, setLabs] = useState([]);
+  const [stores, setStores] = useState([]);
 
-                <div class="hospital1">
-                    <div class="pic">
-                        <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-                        <p>hdgfhsgf</p>
-                    </div>
+  useEffect(() => {
+    getHospitals();
+    getLabs();
+    getStores();
+  }, []);
 
-                </div>
-                <div class="hospital2">
-                    <div class="pic">
-                        <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-                        <p>hdgfhsgf</p>
-                    </div>
+  const getStores = async () => {
+    let res = await fetch('/api/stores/three');
+    res = await res.json();
+    setStores(res);
+  }
 
-                </div>
-                <div class="hospital3">
-                    <div class="pic">
-                    <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-                        <p>hdgfhsgf</p>
-                    </div>
-                </div>
-                <div class="btn">See All </div>
-            </div>
+  const getLabs = async () => {
+    let res = await fetch("/api/labs/three");
+    res = await res.json();
+    setLabs(res);
+  };
 
+  const getHospitals = async () => {
+    let res = await fetch("/api/hospitals/three");
+    res = await res.json();
+    console.log(res);
+    setHospitals(res);
+  };
 
+  return (
+    <main className="flex flex-col w-screen relative">
+      <Navbar />
+      <Background />
+      <section className="w-full py-8 px-3 md:px-10 flex flex-col gap-3 md:gap-5">
+        <h2 className="text-2xl font-semibold px-3 flex w-full justify-between items-end">
+            <span>Hospitals</span>
+            <Link className="text-base px-3" href="/hospitals">See all</Link>
+        </h2>
+        <div className="flex flex-col md:grid grid-cols-3 gap-3 md:gap-5">
+        { hospitals.length ? hospitals.map((hospital) => <HospitalCard hospital={hospital}/>) : <></>}
+        </div>
+      </section>
 
+      <section className="w-full py-8 px-3 md:px-10 flex flex-col gap-3 md:gap-5">
+        <h2 className="text-2xl font-semibold px-3 flex w-full justify-between items-end">
+            <span>Pathology Labs</span>
+            <Link className="text-base px-3" href="/labs">See all</Link>
+        </h2>
+        <div className="flex flex-col md:grid grid-cols-3 gap-3 md:gap-5">
+        { labs.length ? labs.map((lab) => <LabCard lab={lab}/>) : <></> }
+        </div>
+      </section>
 
-            <h5 id="heading"> Drug Store</h5>
-            <div class="tp2">
+      <section className="w-full py-8 px-3 md:px-10 flex flex-col gap-3 md:gap-5">
+        <h2 className="text-2xl font-semibold px-3 flex w-full justify-between items-end">
+            <span>Medical Stores</span>
+            <Link className="text-base px-3" href="/stores">See all</Link>
+        </h2>
+        <div className="flex flex-col md:grid grid-cols-3 gap-3 md:gap-5">
+        { stores.length ? stores.map((store) => <StoreCard store={store}/>) : <></>}
+        </div>
+      </section>
 
-                <div class="hospital4">
-                    <div class="pic">
-                    <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-
-                    </div>
-
-                </div>
-                <div class="hospital5">
-                    <div class="pic">
-                    <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-                        <p>hdgfhsgf</p>
-                    </div>
-
-                </div>
-                <div class="hospital6">
-                    <div class="pic">
-                    <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-                        <p>hdgfhsgf</p>
-                    </div>
-                </div>
-                <div class="btn">See All </div>
-            </div>
-
-
-
-            <h5 id="heading"> Labs</h5>
-            <div class="tp3">
-
-                <div class="hospital7">
-                    <div class="pic">
-                    <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-
-                    </div>
-
-                </div>
-                <div class="hospital8">
-                    <div class="pic">
-                    <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-                        <p>hdgfhsgf</p>
-                    </div>
-
-                </div>
-                <div class="hospital9">
-                    <div class="pic">
-                    <Image src={LOGo} />
-                    </div>
-                    <div class="info">
-                        <p>hdgfhsgf</p>
-                    </div>
-                </div>
-                <div class="btn">See All </div>
-            </div>
-            <hr /><br />
-
-
-            <h1 id='Other_Services'>Other Services</h1>
-            <div className='OtherServicesDivision'>
-
-                <div class='tp4'>
-                    <h2 className='AI'> AI Support</h2>
-                </div>
-
-
-                <div class='tp5'>
-                    <h2 className='Delivery'>Delivery Services</h2>
-                </div>
-            </div>
-        </main>
-    )
-}
+      <Footer />
+    </main>
+  );
+};
 
 export default Services;
