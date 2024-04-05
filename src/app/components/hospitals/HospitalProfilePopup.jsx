@@ -5,7 +5,7 @@ import hospitalProfileImage from '@/assets/images/hospital-profile.jpeg';
 import { MdOutlineEmail, MdLink, MdOutlineLocationOn } from 'react-icons/md';
 import { IoMdTime } from 'react-icons/io';
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 function HospitalProfilePopup({closePopup, hospital}){
     const name = hospital.name;
@@ -13,6 +13,8 @@ function HospitalProfilePopup({closePopup, hospital}){
     const email = hospital.email
     const website = hospital.website;
     const time = hospital.time;
+
+    const router = useRouter();
 
     return(
         <div 
@@ -50,7 +52,11 @@ function HospitalProfilePopup({closePopup, hospital}){
                             {time}
                         </span>
                         <button className="bg-blue-500 hover:bg-blue-700 justify-self-end text-white text-sm md:text-base
-                             px-3 md:px-4 py-1.5 md:py-2 rounded w-fit mt-2">
+                             px-3 md:px-4 py-1.5 md:py-2 rounded w-fit mt-2"
+                             onClick={(e) => {
+                                router.push('/bookappointment/hospital/'+hospital.id);
+                             }}
+                        >
                             Book an Appointment</button>
                     </div>
                 </div>
@@ -63,19 +69,6 @@ function HospitalProfilePopup({closePopup, hospital}){
     );
 }
 
-const Reviews = () => {
-    const [rating, setRating] = useState(0);
-
-    const handleRating = (rate) => {
-        setRating(rate);
-      }
-    return (
-        <div className="flex flex-col gap-2">
-            <h2>Reviews</h2>
-            
-        </div>
-    )
-}
 
 const Departments = ({departments}) => {
     return (
