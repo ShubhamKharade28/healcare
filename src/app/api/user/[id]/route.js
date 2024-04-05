@@ -1,7 +1,7 @@
 import Users from "@/utils/users";
 import { NextResponse } from "next/server";
 
-export function GET({params}){
+export async function GET({params}){
     let id = +params.id;
     let user = Users.find((user) => user.id === id);
     if(user){

@@ -44,6 +44,8 @@ const Signup = () => {
             body: JSON.stringify(body),
         });
 
+        reset(); 
+
         res = await res.json();
         if(!res.ok){
             alert(req.message);
@@ -52,6 +54,16 @@ const Signup = () => {
         alert('Signed up successfully');
         localStorage.setItem('id', res.id);
         router.push('/');
+    }
+
+    function reset(){
+        setName('');
+        setEmail('');
+        setGender('');
+        setDob('');
+        setMedHistory('');
+        setPhone('');
+        setPassword('');
     }
 
     return (

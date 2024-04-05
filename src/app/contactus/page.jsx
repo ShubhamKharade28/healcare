@@ -14,6 +14,13 @@ const ContactUs = () => {
     const submitForm = async (e) => {
         e.preventDefault();
         setBtnContent('Submitted');
+        reset();
+    }
+
+    function reset(){
+        setName('');
+        setEmail('');
+        setMessage('');
     }
 
     return (

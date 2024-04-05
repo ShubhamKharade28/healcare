@@ -5,6 +5,7 @@ import HospitalProfilePopup from './HospitalProfilePopup';
 import Image from 'next/image';
 import { useState } from 'react';
 
+
 const HospitalCard = ({hospital}) => {
     
     const [togglePopup, setTogglePopup] = useState(false);

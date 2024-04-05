@@ -27,10 +27,10 @@ const Footer = () => {
             <div className="flex flex-col gap-5 items-start py-5 md:py-2">
                 <h2 className="text-base md:text-2xl font-semibold md:font-bold">Solutions</h2>
                 <div className="flex flex-col gap-2 md:gap-3">
-                    <Link href="#" className="hover:opacity-80">Hospitals</Link>
-                    <Link href="#" className="hover:opacity-80">Medicals</Link>
-                    <Link href="#" className="hover:opacity-80">Laboratories</Link>
-                    <Link href="#" className="hover:opacity-80">Home Delivery</Link>
+                    <Link href="/hospitals" className="hover:opacity-80">Hospitals</Link>
+                    <Link href="/stores" className="hover:opacity-80">Medicals</Link>
+                    <Link href="/labs" className="hover:opacity-80">Laboratories</Link>
+                    <Link href="/stores" className="hover:opacity-80">Home Delivery</Link>
                 </div>
             </div>
             <div className="flex flex-col md:flex-row gap-10 md:gap-60 items-center md:items-start">
@@ -39,12 +39,11 @@ const Footer = () => {
                     <Link href="/joinus" className="md:w-40 w-28 border-b border-b-white text-center py-2 hover:opacity-80">Join us</Link>
                 </div>
                 <div className="flex gap-3 items-center text-3xl md:text-4xl">
-                    <FaSquareFacebook className="hover:opacity-80"/>
-                    <FaSquareInstagram className="hover:opacity-80"/>
-                    <FaSquareWhatsapp className="hover:opacity-80" />
+                    <Link href="https://www.instagram.com/healcaresoln"><FaSquareFacebook className="hover:opacity-80"/> </Link>
+                    <Link href="https://www.instagram.com/healcaresoln"><FaSquareInstagram className="hover:opacity-80"/></Link>
+                    <Link href="https://www.instagram.com/healcaresoln"><FaSquareWhatsapp className="hover:opacity-80" /></Link>
                 </div>
             </div>
-            
         </footer>
     )
 }

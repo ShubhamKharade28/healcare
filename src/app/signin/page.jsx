@@ -5,10 +5,12 @@ import Background from "../components/Background";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const SignIn = () => {
     const [userId, setUserId] = useState('');
     const [password, setPassword] = useState('');
+    const router = useRouter();
 
     const handleLogin = async (e) => {
         if(!userId){
@@ -26,6 +28,9 @@ const SignIn = () => {
             body: JSON.stringify({userId, password}),
         });
 
+        setUserId('');
+        setPassword('');
+
         res = await res.json();
         if(!res.ok){
             alert(res.message);
@@ -34,6 +39,7 @@ const SignIn = () => {
 
         alert('Signed in successfully!');
         localStorage.setItem('id', res.id);
+        router.push('/');
     }
 
     return (
