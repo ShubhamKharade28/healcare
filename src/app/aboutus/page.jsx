@@ -16,7 +16,7 @@ const Aboutus = () => {
                 <h1 className="font-bold text-3xl md:text-4xl">Nice to meet you</h1>
                 <h3 className="font-semibold md:text-xl">We are here to serve you as you live on mission</h3>
             </section>
-            <div className="flex justify-start w-full relative h-fit">
+            <div className="flex justify-start w-full relative h-fit py-5 cloud-shadow">
                 <div className="w-4/5 md:w-1/2 h-auto relative">
                     <Image src={cloudImg} className="w-full h-auto"/>
                     <span className="absolute z-10 top-1/2 left-12 md:left-32 text-center text-sm md:text-xl font-semibold theme-color-dark">
@@ -26,36 +26,36 @@ const Aboutus = () => {
                     </span>
                 </div>
             </div>
-            <div className="flex justify-end w-full relative h-fit">
+            <div className="flex justify-end w-full relative h-fit py-5 cloud-shadow">
                 <div className="w-4/5 md:w-1/2 h-auto relative">
                     <Image src={cloudTwoImg} className="w-full h-auto"/>
                     <span className="absolute z-10 top-[37%] md:top-[43%] right-12 md:right-32 text-sm md:text-xl font-semibold theme-color-dark
-                        flex flex-col gap-3 items-end md:items-center
+                        flex flex-col gap-2 items-end md:items-start
                     ">
                         <h3 className="font-semibold text-base md:text-3xl">Services provides by us,</h3>
-                        <ul className="flex flex-col items-start gap-2 w-60 font-normal">
-                        <li>1. Appointment booking with Hospitals & Labs</li>
-                        <li>2. Home Delivery from Medical Stores</li>
-                        <li>3. AI advice</li>
+                        <ul className="flex flex-col items-start gap-1 w-60 font-normal md:ml-3">
+                            <li>1. Appointment booking with Hospitals & Labs</li>
+                            <li>2. Home Delivery from Medical Stores</li>
+                            <li>3. AI advice</li>
                         </ul>
                     </span>
                 </div>
             </div>
-            <div className="flex justify-end w-full relative h-fit">
+            <div className="flex justify-start w-full relative h-fit py-5 cloud-shadow">
                 <div className="w-4/5 md:w-1/2 h-auto relative">
-                    <Image src={cloudTwoImg} className="w-full h-auto"/>
-                    <span className="absolute z-10 top-[37%] md:top-[43%] right-12 md:right-32 text-sm md:text-xl font-semibold theme-color-dark
-                        flex flex-col gap-3 items-end md:items-center
-                    ">
-                        <h3 className="font-semibold text-base md:text-3xl">Services provides by us,</h3>
-                        <ul className="flex flex-col items-start gap-2 w-60 font-normal">
-                        <li>1. Appointment booking with Hospitals & Labs</li>
-                        <li>2. Home Delivery from Medical Stores</li>
-                        <li>3. AI advice</li>
+                    <Image src={cloudImg} className="w-full h-auto"/>
+                    <span className="absolute z-10 top-1/3 md:bottom-1/3 left-16 md:left-52 md:text-center text-sm md:text-xl font-semibold theme-color-dark gap-1 md:gap-3 flex flex-col">
+                        <h3 className="font-semibold text-base md:text-3xl">Project developed By </h3>
+                        <ul className="flex flex-col items-start gap-1 md:gap-2 w-60 font-normal ml-2">
+                            <li>1. Shubham Kharade</li>
+                            <li>2. Vaishnavi Mankar</li>
+                            <li>3. Rohit Khawale</li>
+                            <li>4. Atharv Joshi</li>
                         </ul>
                     </span>
                 </div>
             </div>
+    
             <Footer />
         </main>
     )

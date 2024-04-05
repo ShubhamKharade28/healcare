@@ -7,7 +7,10 @@ import HospitalCard from "../components/hospitals/HospitalCard";
 import LabCard from "../components/labs/LabCard";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import StoreCard from "../components/stores/StoreCard"; 
+import StoreCard from "@/app/components/stores/StoreCard"; 
+import aisupportImg from "@/assets/images/ai-support.jpg";
+import pharmacyImg from "@/assets/images/pharmacy.png";
+import Image from 'next/image';
 
 const Services = () => {
   const [hospitals, setHospitals] = useState([]);
@@ -73,6 +76,27 @@ const Services = () => {
         </div>
       </section>
 
+      <divider className="w-2/3 h-0.5 bg-gray-500 my-10 rounded-lg mx-auto"></divider>
+
+      <section className="w-full flex flex-col items-center gap-10 mb-20 text-white text-sm md:text-base">
+        <h1 className="text-xl md:text-2xl font-semibold text-black">Other Services</h1>
+        <div className="flex flex-col md:flex-row items-center gap-10 justify-center w-full">
+          <Link href="/aiadvice" className="relative flex flex-col items-center md:w-1/5 w-4/5 h-60 md:h-96 rounded-lg overflow-hidden p-5 gap-4 border theme-bg">
+            {/* <div className="absolute top-0 left-0 w-full h-full z-0 bg-white opacity-40"></div> */}
+            <h2 className="text-lg md:text-xl font-semibold z-[2]">AI Support</h2>
+            <p className="z-[2]">
+            HealCare is a cutting-edge healthcare website designed to provide seamless support to users through an intuitive AI bot interface. Whether you have a pressing medical concern or simply need advice on maintaining a healthy lifestyle, our AI bot is here to assist you 24/7.
+            </p>
+          </Link>
+          <Link href="/stores" className="relative flex flex-col items-center w-4/5 md:w-1/5 h-60 md:h-96  rounded-lg overflow-hidden  p-5 gap-4 border theme-bg">
+            {/* <div className="absolute top-0 left-0 w-full h-full z-0 bg-white opacity-40"></div> */}
+            <h2 className="text-lg md:text-xl font-semibold z-[2]">Home Delivery</h2>
+            <p className="z-[2]">
+            In addition to our AI-powered support and appointment booking services, HealCare also features a comprehensive directory of medical stores. Need to refill your prescription or purchase over-the-counter medications? Simply browse our directory to find nearby pharmacies and medical stores, complete with contact information and directions.
+            </p>
+          </Link>
+        </div>
+      </section>
       <Footer />
     </main>
   );

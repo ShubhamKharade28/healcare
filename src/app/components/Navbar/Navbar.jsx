@@ -12,7 +12,7 @@ const Navbar = () => {
     const [navToggle, setNavToggle] = useState(false);
 
     return (
-        <main className="w-full h-20 lg:h-full">
+        <main className="w-full h-20 lg:h-full relative z-[99]">
             <nav className="mx-10 hidden md:flex items-center justify-between mt-5 mb-1 gap-3 text-white">
                 <section className="flex items-center justify-between w-full px-3 py-3 bg-[#1a759f] rounded-full"
                 >
