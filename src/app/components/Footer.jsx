@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row gap-10 md:gap-60 items-center md:items-start">
                 <div className="flex flex-col gap-3">
                     <Link href="/contactus" className="md:w-40 w-28 border-b border-b-white text-center py-2 hover:opacity-80">Contact us</Link>
-                    <Link href="/joinus" className="md:w-40 w-28 border-b border-b-white text-center py-2 hover:opacity-80">Join us</Link>
+                    <Link href="https://www.instagram.com/healcaresoln" className="md:w-40 w-28 border-b border-b-white text-center py-2 hover:opacity-80">Join us</Link>
                 </div>
                 <div className="flex gap-3 items-center text-3xl md:text-4xl">
                     <Link href="https://www.instagram.com/healcaresoln"><FaSquareFacebook className="hover:opacity-80"/> </Link>
