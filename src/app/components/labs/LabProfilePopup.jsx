@@ -48,9 +48,9 @@ function LabProfilePopup({closePopup, lab}){
                             <GiHypodermicTest className="text-sm md:text-lg text-gray-700"/>
                             {tests}
                         </span>
-                        <button className="bg-blue-500 hover:bg-blue-700 justify-self-end text-white text-sm md:text-base
+                        <Link href="/bookappointment/lab" className="bg-blue-500 hover:bg-blue-700 justify-self-end text-white text-sm md:text-base
                              px-3 md:px-4 py-1.5 md:py-2 rounded w-fit mt-2">
-                            Book an Appointment</button>
+                            Book an Appointment</Link>
                     </div>
                 </div>
             </motion.div>

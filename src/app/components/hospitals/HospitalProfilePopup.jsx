@@ -54,7 +54,7 @@ function HospitalProfilePopup({closePopup, hospital}){
                         <button className="bg-blue-500 hover:bg-blue-700 justify-self-end text-white text-sm md:text-base
                              px-3 md:px-4 py-1.5 md:py-2 rounded w-fit mt-2"
                              onClick={(e) => {
-                                router.push('/bookappointment/hospital/'+hospital.id);
+                                router.push('/bookappointment/hospital');
                              }}
                         >
                             Book an Appointment</button>
