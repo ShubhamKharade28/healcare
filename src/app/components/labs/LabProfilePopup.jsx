@@ -4,6 +4,7 @@ import Image from "next/image";
 import labProfileImage from '@/assets/images/hospital-profile.jpeg';
 import { MdOutlineEmail, MdPhone, MdOutlineLocationOn } from 'react-icons/md';
 import { GiHypodermicTest } from "react-icons/gi";
+import Link from 'next/link';
 
 
 function LabProfilePopup({closePopup, lab}){

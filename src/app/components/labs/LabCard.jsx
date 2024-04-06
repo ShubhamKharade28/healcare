@@ -4,6 +4,7 @@ import labProfileImg from '@/assets/images/hospital-profile.jpeg';
 import LabProfilePopup from './LabProfilePopup';
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const LabCard = ({lab}) => {
     
